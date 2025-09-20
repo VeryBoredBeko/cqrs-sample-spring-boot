@@ -9,17 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class QueryHandler {
+public class OrderHistoryQuery {
 
-    private final OrderHistoryRepository repository;
+    private final OrderHistoryDAO repository;
 
     @Autowired
-    public QueryHandler(OrderHistoryRepository repository) {
+    public OrderHistoryQuery(OrderHistoryDAO repository) {
         this.repository = repository;
     }
 
     @GetMapping("/orders")
-    public ResponseEntity<List<OrderHistory>> getOrdersHistory() {
+    public ResponseEntity<List<OrderHistory>> findOrderHistory() {
         return new ResponseEntity<>(repository.findAll(), HttpStatus.OK);
     }
 }

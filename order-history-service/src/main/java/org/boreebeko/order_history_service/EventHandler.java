@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class EventHandler {
 
-    private final OrderHistoryRepository repository;
+    private final OrderHistoryDAO repository;
 
     @Autowired
-    public EventHandler(OrderHistoryRepository repository) {
+    public EventHandler(OrderHistoryDAO repository) {
         this.repository = repository;
     }
 

@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 import java.util.UUID;
 
 @Repository
-public interface OrderHistoryRepository extends MongoRepository<OrderHistory, UUID> {
+public interface OrderHistoryDAO extends MongoRepository<OrderHistory, UUID> {
 }
